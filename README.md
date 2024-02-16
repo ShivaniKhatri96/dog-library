@@ -1,6 +1,6 @@
 # Dog Library
 
-> Dog Library is a mini library where you can find facts about different breeds for dogs
+> Dog Library is a mini library where you can find facts about different breeds of dogs.
 > If you are a dog lover, it's especially for you *wink*
 
 ### Screenshots
