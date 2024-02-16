@@ -7,7 +7,7 @@
 > Will be added once the project is completed
 
 ### Tools that will be used
-> This will be a frontend project with using external API's
+> This will be a frontend project using external API
 - Next.js
 - Typescript
 - CSS
