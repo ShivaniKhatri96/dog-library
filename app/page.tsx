@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import GridDog from "./components/GridDog";
+import GridDog from "./components/grid-dog";
 
 export default function Home() {
   const [allDogs, setAllDogs] = useState<any[]>([]);
