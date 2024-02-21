@@ -5,6 +5,7 @@ type gridType = {
   setAllDogs: any
 }
 const GridDog = ({allDogs, setAllDogs}: gridType) => {
+  console.log(allDogs)
   if(!allDogs.length) return
   return (
     <div className={styles.allCards}>
@@ -12,10 +13,10 @@ const GridDog = ({allDogs, setAllDogs}: gridType) => {
      <div key={dog.id} className={styles.card}>
       {/* dog.url: "https://cdn2.thedogapi.com/images/S1T8Ee9Nm_1280.jpg" */}
       <div>Name: {dog?.breeds[0]?.name}</div>
-      <div>Temperament: {dog?.breeds[0]?.temperament}</div>
-      <div>Breed group: {dog?.breeds[0]?.bred_group}</div>
+      <div>Breed group: {dog?.breeds[0]?.breed_group}</div>
       <div>Breed for: {dog?.breeds[0]?.bred_for}</div>
       <div>life span: {dog?.breeds[0]?.life_span}</div>
+      {/* <div>Temperament: {dog?.breeds[0]?.temperament}</div> */}
      </div>)}
     </div>
   )
