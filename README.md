@@ -13,6 +13,7 @@
 - CSS
 - React-select (library)
 - [Dog api](https://thedogapi.com/)
+- lottie-animation for loading screen
 
 ### Responsive Design
 > This project will be done with responsive design in mind
