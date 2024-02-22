@@ -19,6 +19,7 @@
 
 ### Goals
 - Grid layout containg various Dogs
+- Add loading... to both main page and image
 - Search bar that filters dogs based on their species name
 - Select/ dropdown to filter species based on some criteria
 - React-select style change
