@@ -23,15 +23,24 @@ const GridDog = ({ allDogs, setAllDogs }: gridType) => {
           />
           <div className={styles.cardContent}>
             <div className={styles.cardTitle}>{dog?.breeds[0]?.name}</div>
-            <div>Breed group: {dog?.breeds[0]?.breed_group}</div>
             <div>
-              Breed for:{" "}
-              {dog?.breeds[0]?.bred_for && dog?.breeds[0]?.bred_for?.length
-                ? dog?.breeds[0]?.bred_for
-                : `_`}
+              <div>Breed group</div>
+              <div>{dog?.breeds[0]?.breed_group}</div>
             </div>
-            <div>life span: {dog?.breeds[0]?.life_span}</div>
+            <div>
+              <div>Breed for</div>
+              <div>
+                {dog?.breeds[0]?.bred_for && dog?.breeds[0]?.bred_for?.length
+                  ? dog?.breeds[0]?.bred_for
+                  : `_`}
+              </div>
+            </div>
+            <div>
+              <div>life span</div>
+              <div>{dog?.breeds[0]?.life_span}</div>
+            </div>
             {/* <div>Temperament: {dog?.breeds[0]?.temperament}</div> */}
+            {/* <div>Learn more...(button)</div> */}
           </div>
         </div>
       ))}
