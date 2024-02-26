@@ -13,15 +13,15 @@
 - Typescript
 - CSS
 - React-select (library)
-- [Dog api](https://thedogapi.com/)
+- [Dog API](https://thedogapi.com/)
 - lottie-animation for loading screen
 
 ### Responsive Design
 > This project will be done with responsive design in mind
 
 ### Completed Tasks
-- Data rendered from the [Dog api](https://thedogapi.com/)
-- Loading screen added and it shows when data isn't rendered yet from the [Dog api](https://thedogapi.com/)
+- Data rendered from the [Dog API](https://thedogapi.com/)
+- Loading screen added from lottie-animation and it shows when data isn't rendered yet from the [Dog API](https://thedogapi.com/)
 - Grid layout containg various Dogs created with responsive layout in mind
 - String truncated with 'text-transform:Ellipsis' in the Grid layout
 
