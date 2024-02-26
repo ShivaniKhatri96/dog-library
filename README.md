@@ -22,10 +22,10 @@
 ### Completed Tasks
 - Data rendered from the [Dog api](https://thedogapi.com/)
 - Loading screen added and it shows when data isn't rendered yet from the [Dog api](https://thedogapi.com/)
-- Grid layout is created but needs some more styling
+- Grid layout containg various Dogs created with responsive layout in mind
+- String truncated with 'text-transform:Ellipsis' in the Grid layout
 
 ### Goals
-- Grid layout containg various Dogs
 - Search bar that filters dogs based on their species name
 - Select/ dropdown to filter species based on some criteria
 - React-select style change
