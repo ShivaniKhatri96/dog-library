@@ -2,6 +2,7 @@
 import styles from "./grid-dog.module.css";
 import Image from "next/image";
 import Loading from "./loading";
+
 type gridType = {
   allDogs: any;
   setAllDogs: any;
@@ -23,7 +24,7 @@ const GridDog = ({ allDogs, setAllDogs }: gridType) => {
           />
           <div className={styles.cardContent}>
             <div className={styles.cardTitle}>{dog?.breeds[0]?.name}</div>
-          
+
             <div className={styles.breedInfoBox}>
               <div className={styles.breedInfoTitle}>Breed group</div>
               <div className={styles.breedInfoContent}>

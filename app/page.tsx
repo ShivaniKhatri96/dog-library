@@ -2,6 +2,7 @@
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import GridDog from "./components/grid-dog";
+import Select from "react-select";
 
 export default function Home() {
   const [allDogs, setAllDogs] = useState<any[]>([]);
@@ -43,11 +44,19 @@ export default function Home() {
     };
     fetchData();
   }, []);
+  const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
 
   return (
     <main className={styles.main}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
-      {/* <input /> */}
+      <div className={styles.searchSelectBox}>
+        <input type="text" />
+        <Select options={options} />
+      </div>
       <GridDog allDogs={allDogs} setAllDogs={setAllDogs} />
     </main>
   );
