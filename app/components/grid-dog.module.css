@@ -13,7 +13,10 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .cardContent {
-  padding: 1rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .imageContainer {
   overflow: hidden;
@@ -25,4 +28,27 @@
   font-family: "Protest Revolution", sans-serif;
   font-size: 1.2rem;
   font-style: normal;
+}
+.breedInfoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.85rem;
+}
+.breedInfoTitle {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.learnMoreBtn {
+  font-size: 0.7rem;
+  padding-top: 0.3rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+  border: 0;
+  background-color: var(--white);
+  color: var(--button-color);
+}
+.learnMoreBtn:hover {
+  color: var(--button-hover-color);
 }
