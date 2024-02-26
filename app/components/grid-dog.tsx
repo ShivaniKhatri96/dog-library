@@ -23,24 +23,30 @@ const GridDog = ({ allDogs, setAllDogs }: gridType) => {
           />
           <div className={styles.cardContent}>
             <div className={styles.cardTitle}>{dog?.breeds[0]?.name}</div>
+          
             <div className={styles.breedInfoBox}>
               <div className={styles.breedInfoTitle}>Breed group</div>
-              <div>{dog?.breeds[0]?.breed_group}</div>
+              <div className={styles.breedInfoContent}>
+                {dog?.breeds[0]?.breed_group}
+              </div>
             </div>
             <div className={styles.breedInfoBox}>
-              <div className={styles.breedInfoTitle}>Breed for</div>
-              <div>
+              <div className={styles.breedInfoTitle}>life span</div>
+              <div className={styles.breedInfoContent}>
+                {dog?.breeds[0]?.life_span}
+              </div>
+            </div>
+            <div className={styles.breedInfoBox}>
+              <div className={styles.breedInfoTitle}>Bred for</div>
+              <div className={styles.breedInfoContent}>
                 {dog?.breeds[0]?.bred_for && dog?.breeds[0]?.bred_for?.length
                   ? dog?.breeds[0]?.bred_for
                   : `_`}
               </div>
             </div>
-            <div className={styles.breedInfoBox}>
-              <div className={styles.breedInfoTitle}>life span</div>
-              <div>{dog?.breeds[0]?.life_span}</div>
-            </div>
+
             {/* <div>Temperament: {dog?.breeds[0]?.temperament}</div> */}
-            <div >
+            <div>
               <button className={styles.learnMoreBtn}>Learn more</button>
             </div>
           </div>

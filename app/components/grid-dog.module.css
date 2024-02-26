@@ -39,6 +39,12 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+.breedInfoContent {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
 .learnMoreBtn {
   font-size: 0.7rem;
   padding-top: 0.3rem;
