@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
 .allCards {
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
@@ -40,10 +39,10 @@
   font-weight: 600;
 }
 .breedInfoContent {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 .learnMoreBtn {
   font-size: 0.7rem;

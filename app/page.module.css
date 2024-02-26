@@ -1,3 +1,13 @@
 .main {
-display: grid;
+  display: grid;
+  padding: 1.5rem;
+}
+.bookshelfTitle {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
 }

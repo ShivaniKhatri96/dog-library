@@ -46,7 +46,8 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div>BowWow Bookshelf</div>
+      <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
+      {/* <input /> */}
       <GridDog allDogs={allDogs} setAllDogs={setAllDogs} />
     </main>
   );
