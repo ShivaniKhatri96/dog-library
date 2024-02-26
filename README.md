@@ -1,7 +1,7 @@
 # BowWow Bookshelf
 
 > BowWow Bookshelf is a mini library where you can find facts about different breeds of dogs.
-> If you are a dog lover, it's especially for you *wink*
+> If you are a dog lover, it's especially for you *wink*.
 > It takes some time for the data to load from the API. Just be patient when the data loads *hehe*
 
 ### Screenshots
