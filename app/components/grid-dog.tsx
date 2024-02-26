@@ -16,8 +16,8 @@ const GridDog = ({ allDogs, setAllDogs }: gridType) => {
           <Image
             src={`${dog?.url}`}
             alt={`${dog?.breeds[0]?.name}`}
-            width={250}
-            height={160}
+            width={300}
+            height={200}
             className={styles.imageContainer}
             priority={true}
           />
