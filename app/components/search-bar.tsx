@@ -3,9 +3,24 @@ import React, { useState } from "react";
 import SearchIcon from "@/public/search-icon.svg";
 import Image from "next/image";
 import Styles from "./search-bar.module.css";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
 const SearchBar = () => {
   const [isSearch, setIsSearch] = useState<boolean>(false);
-  console.log(isSearch);
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
+  const handleSearch = (term: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (term) {
+      params.set("query", term);
+    } else {
+      params.delete("query");
+    }
+    // For example, /dashboard/invoices?query=lee if the user searches for "Lee"
+    replace(`${pathname}?${params.toString()}`);
+  };
+
   return (
     <div
       className={`${Styles.searchbarBox} ${
@@ -25,6 +40,10 @@ const SearchBar = () => {
         onFocus={() => setIsSearch(true)}
         onBlur={() => setIsSearch(false)}
         placeholder="Search using Dog name, eg: Bulldog..."
+        onChange={(e) => {
+          handleSearch(e.target.value);
+        }}
+        defaultValue={searchParams.get("query")?.toString()}
       />
     </div>
   );

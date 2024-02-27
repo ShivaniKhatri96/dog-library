@@ -1,18 +1,16 @@
 "use client";
 import styles from "./grid-dog.module.css";
 import Image from "next/image";
-import Loading from "./loading";
+import NotFound from "./search-not-found";
 
 type gridType = {
-  allDogs: any;
-  setAllDogs: any;
+  searchOptions: any;
 };
-const GridDog = ({ allDogs, setAllDogs }: gridType) => {
-  console.log(allDogs);
-  if (!allDogs.length) return <Loading />;
+const GridDog = ({ searchOptions }: gridType) => {
+  if (!searchOptions.length) return <NotFound />;
   return (
     <div className={styles.allCards}>
-      {allDogs?.map((dog: any) => (
+      {searchOptions?.map((dog: any) => (
         <div key={dog.id} className={styles.card}>
           <Image
             src={`${dog?.url}`}

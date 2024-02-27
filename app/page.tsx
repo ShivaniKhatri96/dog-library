@@ -1,12 +1,16 @@
 "use client";
 import styles from "./page.module.css";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import GridDog from "./components/grid-dog";
 import Select from "react-select";
 import SearchBar from "./components/search-bar";
+import { useSearchParams } from "next/navigation";
+import Loading from "./components/loading";
 
 export default function Home() {
   const [allDogs, setAllDogs] = useState<any[]>([]);
+  const searchParams: any = useSearchParams();
+  const query = searchParams.get("query")?.toString() || "";
 
   const removeDuplicates = (data: any) => {
     const idSet: any = {}; // Object to store encountered ids
@@ -50,7 +54,11 @@ export default function Home() {
     { value: "strawberry", label: "Strawberry" },
     { value: "vanilla", label: "Vanilla" },
   ];
-
+  const searchOptions = allDogs?.filter(
+    (dog) =>
+      query === "" ||
+      dog?.breeds[0].name.toLowerCase().includes(query.toLowerCase())
+  );
   return (
     <main className={styles.main}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
@@ -58,7 +66,13 @@ export default function Home() {
         <SearchBar />
         <Select options={options} />
       </div>
-      <GridDog allDogs={allDogs} setAllDogs={setAllDogs} />
+      {allDogs.length ? (
+        <Suspense fallback={<Loading />}>
+          <GridDog searchOptions={searchOptions} />
+        </Suspense>
+      ) : (
+        <Loading />
+      )}
     </main>
   );
 }

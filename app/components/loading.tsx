@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 import animationData from "@/public/loading-animation.json";
-import styles from "./loading.module.css";
+import styles from "./animation.module.css";
 const Loading = () => {
   return (
     <div className={styles.animationBox}>
