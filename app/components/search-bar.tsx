@@ -24,6 +24,7 @@ const SearchBar = () => {
         className={Styles.searchbar}
         onFocus={() => setIsSearch(true)}
         onBlur={() => setIsSearch(false)}
+        placeholder="Search using Dog name, eg: Bulldog..."
       />
     </div>
   );

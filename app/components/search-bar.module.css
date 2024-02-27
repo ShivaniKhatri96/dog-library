@@ -8,7 +8,7 @@
   background-color: var(--white);
 }
 .searchbarBoxFocused {
-  border: var(--text-color) solid 1.5px;
+  border: var(--text-color) solid 2px;
 }
 .searchbar {
   border: 0;

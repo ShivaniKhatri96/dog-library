@@ -1,9 +1,11 @@
 .animationBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1 takes all the remaining space/height so that icon can be in the center */
+  flex: 1;
+  margin-top: -5rem;
 }
 .animationStyle {
-    width: 350px;
+  width: 350px;
 }
