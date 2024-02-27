@@ -3,12 +3,12 @@
   align-items: center;
   gap: 0.3rem;
   padding: 0 0.5rem;
-  border: var(--gray) solid 1.5px;
+  border: var(--light-gray) solid 2px;
   border-radius: 4px;
   background-color: var(--white);
 }
 .searchbarBoxFocused {
-  border: var(--text-color) solid 2px;
+  border: var(--gray) solid 2px;
 }
 .searchbar {
   border: 0;

@@ -2,8 +2,9 @@
 :root {
   --background: #dce0e4;
   --white: #ffffff;
+  --light-gray: #c5c5c5;
   --gray: #999999;
-  --text-color: #333333;
+  --dark-gray: #333333;
   --button-color: #80669d;
   --button-hover-color: #a881af;
 }
@@ -18,6 +19,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  color: var(--text-color);
+  color: var(--dark-gray);
   background-color: var(--background);
 }
