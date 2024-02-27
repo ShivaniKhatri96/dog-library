@@ -40,7 +40,7 @@ const SearchBar = () => {
         className={Styles.searchbar}
         onFocus={() => setIsSearch(true)}
         onBlur={() => setIsSearch(false)}
-        placeholder="Search using Dog name, eg: Bulldog..."
+        placeholder="Search using Dog Name, eg: Bulldog..."
         onChange={(e) => {
           handleSearch(e.target.value);
         }}
