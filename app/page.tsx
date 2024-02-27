@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GridDog from "./components/grid-dog";
 import Select from "react-select";
 import SearchBar from "./components/search-bar";
@@ -67,10 +67,10 @@ export default function Home() {
         <Select options={options} />
       </div>
       {allDogs.length ? (
-        <Suspense fallback={<Loading />}>
-          <GridDog searchOptions={searchOptions} />
-        </Suspense>
+        // <Suspense fallback={<Loading />}>
+        <GridDog searchOptions={searchOptions} />
       ) : (
+        // {/* </Suspense> */}
         <Loading />
       )}
     </main>

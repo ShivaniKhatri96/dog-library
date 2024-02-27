@@ -4,6 +4,7 @@ import SearchIcon from "@/public/search-icon.svg";
 import Image from "next/image";
 import Styles from "./search-bar.module.css";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
+
 const SearchBar = () => {
   const [isSearch, setIsSearch] = useState<boolean>(false);
   const searchParams = useSearchParams();
@@ -20,7 +21,7 @@ const SearchBar = () => {
     // For example, /dashboard/invoices?query=lee if the user searches for "Lee"
     replace(`${pathname}?${params.toString()}`);
   };
-
+  
   return (
     <div
       className={`${Styles.searchbarBox} ${

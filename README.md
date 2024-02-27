@@ -24,9 +24,10 @@
 - Loading screen added from lottie-animation and it shows when data isn't rendered yet from the [Dog API](https://thedogapi.com/)
 - Grid layout containg various Dogs created with responsive layout in mind
 - String truncated with 'text-transform:Ellipsis' in the Grid layout
+- Search bar that filters dogs based on their species name
+- When no results are found while searching, another cute lottie-animation is shown
 
 ### Goals
-- Search bar that filters dogs based on their species name
 - Select/ dropdown to filter species based on some criteria
 - React-select style change
 - making searchbar and select responsive
