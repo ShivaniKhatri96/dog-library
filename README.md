@@ -31,6 +31,6 @@
 - Select/ dropdown to filter species based on some criteria
 - React-select style change
 - making searchbar and select responsive
-- Clicking on the button to show more info about the species (modal or next page to be decided)
 - Adding pagination
+- Clicking on the button to show more info about the species (modal or next page to be decided)
 - Making the whole project responsive
