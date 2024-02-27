@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import GridDog from "./components/grid-dog";
 import Select from "react-select";
+import SearchBar from "./components/search-bar";
 
 export default function Home() {
   const [allDogs, setAllDogs] = useState<any[]>([]);
@@ -54,7 +55,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
       <div className={styles.searchSelectBox}>
-        <input type="text" />
+        <SearchBar />
         <Select options={options} />
       </div>
       <GridDog allDogs={allDogs} setAllDogs={setAllDogs} />
