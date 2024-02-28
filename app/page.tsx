@@ -6,6 +6,7 @@ import Select from "react-select";
 import SearchBar from "./components/search-bar";
 import { useSearchParams } from "next/navigation";
 import Loading from "./components/loading";
+import { colorStyles } from "./select-styles/select-styles";
 
 export default function Home() {
   const [allDogs, setAllDogs] = useState<any[]>([]);
@@ -64,7 +65,7 @@ export default function Home() {
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
       <div className={styles.searchSelectBox}>
         <SearchBar />
-        <Select options={options} />
+        <Select options={options} styles={colorStyles}/>
       </div>
       {allDogs.length ? (
         // <Suspense fallback={<Loading />}>
