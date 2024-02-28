@@ -4,13 +4,13 @@ import Image from "next/image";
 import NotFound from "./search-not-found";
 
 type gridType = {
-  searchOptions: any;
+  updatedOptions: any;
 };
-const GridDog = ({ searchOptions }: gridType) => {
-  if (!searchOptions.length) return <NotFound />;
+const GridDog = ({ updatedOptions }: gridType) => {
+  if (!updatedOptions.length) return <NotFound />;
   return (
     <div className={styles.allCards}>
-      {searchOptions?.map((dog: any) => (
+      {updatedOptions?.map((dog: any) => (
         <div key={dog.id} className={styles.card}>
           <Image
             src={`${dog?.url}`}

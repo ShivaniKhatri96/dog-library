@@ -10,6 +10,7 @@ import { colorStyles } from "./select-styles/select-styles";
 
 export default function Home() {
   const [allDogs, setAllDogs] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>("");
   const searchParams: any = useSearchParams();
   const query = searchParams.get("query")?.toString() || "";
 
@@ -50,26 +51,47 @@ export default function Home() {
     };
     fetchData();
   }, []);
+  //options for react-select
   const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
+    { value: "sporting", label: "Sporting" },
+    { value: "non-sporting", label: "Non-Sporting" },
+    { value: "terrier", label: "Terrier" },
+    { value: "herding", label: "Herding" },
+    { value: "toy", label: "Toy" },
+    { value: "working", label: "Working" },
+    { value: "hound", label: "Hound" },
+    { value: "mixed", label: "Mixed" },
+    { value: "any", label: "Any" },
   ];
-  const searchOptions = allDogs?.filter(
-    (dog) =>
-      query === "" ||
-      dog?.breeds[0].name.toLowerCase().includes(query.toLowerCase())
-  );
+  const selectedHandler = (selectedOption: any) => {
+    setSelected(selectedOption.value);
+  };
+  //updating the options based on search and select options
+  const updatedOptions = allDogs?.filter((dog) => {
+    const isSearchMatch =
+      query.length &&
+      dog?.breeds[0].name.toLowerCase().includes(query.toLowerCase());
+    const isSelectedMatch =
+      selected === "any" ||
+      dog?.breeds[0].breed_group.toLowerCase() === selected.toLowerCase();
+    return (
+      (query === "" || isSearchMatch) && (selected === "" || isSelectedMatch)
+    );
+  });
   return (
     <main className={styles.main}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
       <div className={styles.searchSelectBox}>
         <SearchBar />
-        <Select options={options} styles={colorStyles}/>
+        <Select
+          options={options}
+          styles={colorStyles}
+          onChange={selectedHandler}
+        />
       </div>
       {allDogs.length ? (
         // <Suspense fallback={<Loading />}>
-        <GridDog searchOptions={searchOptions} />
+        <GridDog updatedOptions={updatedOptions} />
       ) : (
         // {/* </Suspense> */}
         <Loading />
