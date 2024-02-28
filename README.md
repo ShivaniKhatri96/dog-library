@@ -25,11 +25,11 @@
 - Grid layout containg various Dogs created with responsive layout in mind
 - String truncated with 'text-transform:Ellipsis' in the Grid layout
 - Search bar that filters dogs based on their species name
-- When no results are found while searching, another cute lottie-animation is shown
-
-### Goals
 - Select/ dropdown to filter species based on some criteria
 - React-select style change
+- When results are not found while searching and/or selecting, another cute lottie-animation is shown
+
+### Goals
 - making searchbar and select responsive
 - Adding pagination
 - Clicking on the button to show more info about the species (modal or next page to be decided)
