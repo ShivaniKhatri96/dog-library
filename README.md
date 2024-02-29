@@ -28,7 +28,7 @@
 - Select/ dropdown to filter species based on some criteria
 - React-select style change
 - When results are not found while searching and/or selecting, another cute lottie-animation is shown
-- making searchbar and select responsive
+- Making searchbar and select responsive
 
 ### Goals
 - Adding pagination
