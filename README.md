@@ -30,7 +30,9 @@
 - When results are not found while searching and/or selecting, another cute lottie-animation is shown
 - Making searchbar and select responsive
 
-### Goals
+### Currently working on
 - Adding pagination
+
+### Goals
 - Clicking on the button to show more info about the species (modal or next page to be decided)
 - Making the whole project responsive
