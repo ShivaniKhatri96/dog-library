@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 import animationData from "@/public/not-found.json";
-import styles from "./animation.module.css";
+import styles from "./Animation.module.css";
 
 const NotFound = () => {
   return (

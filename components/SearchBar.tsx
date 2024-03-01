@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import SearchIcon from "@/public/search-icon.svg";
 import Image from "next/image";
-import Styles from "./search-bar.module.css";
+import styles from "./SearchBar.module.css";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 const SearchBar = () => {
@@ -24,8 +24,8 @@ const SearchBar = () => {
   
   return (
     <div
-      className={`${Styles.searchbarBox} ${
-        isSearch ? Styles.searchbarBoxFocused : ""
+      className={`${styles.searchbarBox} ${
+        isSearch ? styles.searchbarBoxFocused : ""
       }`}
     >
       <Image
@@ -37,7 +37,7 @@ const SearchBar = () => {
       />
       <input
         type="text"
-        className={Styles.searchbar}
+        className={styles.searchbar}
         onFocus={() => setIsSearch(true)}
         onBlur={() => setIsSearch(false)}
         placeholder="Search using Dog Name, eg: Bulldog..."

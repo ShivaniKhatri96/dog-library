@@ -1,7 +1,7 @@
 "use client";
-import styles from "./grid-dog.module.css";
+import styles from "./GridDog.module.css";
 import Image from "next/image";
-import NotFound from "./search-not-found";
+import NotFound from "./NotFound";
 
 type gridType = {
   updatedOptions: any;

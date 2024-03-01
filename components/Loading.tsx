@@ -1,10 +1,14 @@
 import Lottie from "lottie-react";
 import animationData from "@/public/loading-animation.json";
-import styles from "./animation.module.css";
+import styles from "./Animation.module.css";
 const Loading = () => {
   return (
     <div className={styles.animationBox}>
-      <Lottie animationData={animationData} loop={true} className={styles.animationStyle}/>
+      <Lottie
+        animationData={animationData}
+        loop={true}
+        className={styles.animationStyle}
+      />
     </div>
   );
 };

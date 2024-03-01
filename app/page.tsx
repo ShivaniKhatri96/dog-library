@@ -1,12 +1,12 @@
 "use client";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import GridDog from "./components/grid-dog";
+import GridDog from "../components/GridDog";
 import Select from "react-select";
-import SearchBar from "./components/search-bar";
+import SearchBar from "../components/SearchBar";
 import { useSearchParams } from "next/navigation";
-import Loading from "./components/loading";
-import { colorStyles } from "./select-styles/select-styles";
+import Loading from "../components/Loading";
+import { colorStyles } from "../select-styles/SelectStyles";
 
 export default function Home() {
   const [allDogs, setAllDogs] = useState<any[]>([]);
