@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import SearchIcon from "@/public/search-icon.svg";
+import SearchIcon from "@/public/assets/search-icon.svg";
 import Image from "next/image";
 import styles from "./SearchBar.module.css";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
