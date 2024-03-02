@@ -92,6 +92,7 @@ export default function Home({
       (query === "" || isSearchMatch) && (selected === "" || isSelectedMatch)
     );
   });
+  const totalPages = Math.ceil(updatedOptions.length / per_page);
 
   return (
     <main className={styles.main}>
@@ -106,12 +107,17 @@ export default function Home({
       </div>
       {updatedOptions.length ? (
         // <Suspense fallback={<Loading />}>
-        <GridDog updatedOptions={updatedOptions} start={start} end={end}/>
+        <GridDog updatedOptions={updatedOptions} start={start} end={end} />
       ) : (
         //</Suspense>
         <Loading />
       )}
-      <Pagination />
+      <Pagination
+        totalPages={totalPages}
+        hasNextPage={end < updatedOptions.length}
+        hasPrevPage={start > 0}
+        per_page = {per_page}
+      />
     </main>
   );
 }
