@@ -7,14 +7,12 @@ interface PaginationControlsProps {
   hasNextPage: boolean;
   hasPrevPage: boolean;
   totalPages: number;
-  per_page: number;
 }
 
 export const Pagination: FC<PaginationControlsProps> = ({
   hasNextPage,
   hasPrevPage,
   totalPages,
-  per_page,
 }: PaginationControlsProps) => {
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -24,7 +22,6 @@ export const Pagination: FC<PaginationControlsProps> = ({
   const createPageURL = (pageNumber: number | string) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", pageNumber.toString());
-    params.set("per_page", per_page.toString());
     replace(`${pathname}?${params.toString()}`);
   };
   return (

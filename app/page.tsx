@@ -116,7 +116,6 @@ export default function Home({
         totalPages={totalPages}
         hasNextPage={end < updatedOptions.length}
         hasPrevPage={start > 0}
-        per_page = {per_page}
       />
     </main>
   );
