@@ -21,7 +21,7 @@ export default function Home({
   const [selected, setSelected] = useState<string>("");
   const query = searchParams?.query || "";
   const currentPage = Number(searchParams?.page) || 1;
-  const per_page = Number(searchParams?.per_page) || 6;
+  const per_page = Number(searchParams?.per_page) || 4;
 
   //mocked, skipped and limited in the real app
   const start = (currentPage - 1) * per_page;
@@ -81,7 +81,7 @@ export default function Home({
   };
 
   //updating the options based on search and select options
-  const updatedOptions = allDogs.slice(start, end)?.filter((dog) => {
+  const updatedOptions = allDogs?.filter((dog) => {
     const isSearchMatch =
       query.length &&
       dog?.breeds[0].name.toLowerCase().includes(query.toLowerCase());
@@ -106,7 +106,7 @@ export default function Home({
       </div>
       {updatedOptions.length ? (
         // <Suspense fallback={<Loading />}>
-        <GridDog updatedOptions={updatedOptions} />
+        <GridDog updatedOptions={updatedOptions} start={start} end={end}/>
       ) : (
         //</Suspense>
         <Loading />
