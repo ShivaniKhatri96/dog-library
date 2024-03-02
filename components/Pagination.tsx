@@ -1,16 +1,50 @@
-import styles from './Pagination.module.css'
+"use client";
+import styles from "./Pagination.module.css";
+import { FC } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-const Pagination = ({ postsPerPage, length }) => {
-  const paginationNumbers = [];
+// interface PaginationControlsProps {
+//   hasNextPage: boolean;
+//   hasPrevPage: boolean;
+// }
 
-  for (let i = 1; i <= Math.ceil(length / postsPerPage); i++) {
-    paginationNumbers.push(i);
-  }
+export const Pagination = () => {
+  const { replace } = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const currentPage = Number(searchParams.get("page")) || 1;
+  const per_page = Number(searchParams.get("per_page")) || 5;
+
+  const createPageURL = (pageNumber: number | string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("page", pageNumber.toString());
+    replace(`${pathname}?${params.toString()}`);
+  };
   return (
-    <div className={styles.pagination}>
-      {paginationNumbers.map((pageNumber) => (
-        <button key={pageNumber}>{pageNumber}</button>
-      ))}
+    <div className="flex gap-2">
+      <button
+        className="bg-blue-500 text-white p-1"
+        // disabled={!hasPrevPage}
+        onClick={() => {
+          createPageURL(currentPage - 1);
+        }}
+      >
+        prev page
+      </button>
+
+      <div>
+        {currentPage} / {Math.ceil(10 / Number(per_page))}
+      </div>
+
+      <button
+        className="bg-blue-500 text-white p-1"
+        // disabled={!hasNextPage}
+        onClick={() => {
+          createPageURL(currentPage + 1);
+        }}
+      >
+        next page
+      </button>
     </div>
   );
 };

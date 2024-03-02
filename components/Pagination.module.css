@@ -8,3 +8,9 @@
 .pagination button {
   padding: 10px;
 }
+
+.active {
+  background: black;
+  color: #fff;
+  border: 1px solid #fff;
+}

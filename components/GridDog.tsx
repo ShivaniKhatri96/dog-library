@@ -10,6 +10,7 @@ const GridDog = ({ updatedOptions }: gridType) => {
   if (!updatedOptions.length) return <NotFound />;
   return (
     <div className={styles.allCards}>
+      {/* shows first 6 options */}
       {updatedOptions?.map((dog: any) => (
         <div key={dog.id} className={styles.card}>
           <Image

@@ -4,15 +4,28 @@ import { useEffect, useState } from "react";
 import GridDog from "../components/GridDog";
 import Select from "react-select";
 import SearchBar from "../components/SearchBar";
-import { useSearchParams } from "next/navigation";
 import Loading from "../components/Loading";
 import { colorStyles } from "../select-styles/SelectStyles";
+import Pagination from "@/components/Pagination";
 
-export default function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
+    per_page?: string;
+  };
+}) {
   const [allDogs, setAllDogs] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>("");
-  const searchParams: any = useSearchParams();
-  const query = searchParams.get("query")?.toString() || "";
+  const query = searchParams?.query || "";
+  const currentPage = Number(searchParams?.page) || 1;
+  const per_page = Number(searchParams?.per_page) || 6;
+
+  //mocked, skipped and limited in the real app
+  const start = (currentPage - 1) * per_page;
+  const end = start + per_page;
 
   const removeDuplicates = (data: any) => {
     const idSet: any = {}; // Object to store encountered ids
@@ -66,8 +79,9 @@ export default function Home() {
   const selectedHandler = (selectedOption: any) => {
     setSelected(selectedOption.value);
   };
+
   //updating the options based on search and select options
-  const updatedOptions = allDogs?.filter((dog) => {
+  const updatedOptions = allDogs.slice(start, end)?.filter((dog) => {
     const isSearchMatch =
       query.length &&
       dog?.breeds[0].name.toLowerCase().includes(query.toLowerCase());
@@ -78,6 +92,7 @@ export default function Home() {
       (query === "" || isSearchMatch) && (selected === "" || isSelectedMatch)
     );
   });
+
   return (
     <main className={styles.main}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
@@ -89,13 +104,14 @@ export default function Home() {
           onChange={selectedHandler}
         />
       </div>
-      {allDogs.length ? (
+      {updatedOptions.length ? (
         // <Suspense fallback={<Loading />}>
         <GridDog updatedOptions={updatedOptions} />
       ) : (
-        // {/* </Suspense> */}
+        //</Suspense>
         <Loading />
       )}
+      <Pagination />
     </main>
   );
 }
