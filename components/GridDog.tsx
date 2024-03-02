@@ -13,7 +13,7 @@ const GridDog = ({ updatedOptions, start, end }: gridType) => {
   return (
     <div className={styles.allCards}>
       {/* slicing for pagination use */}
-      {updatedOptions.slice(start, end)?.map((dog: any) => (
+      {updatedOptions?.slice(start, end)?.map((dog: any) => (
         <div key={dog.id} className={styles.card}>
           <Image
             src={`${dog?.url}`}

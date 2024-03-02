@@ -105,7 +105,8 @@ export default function Home({
           onChange={selectedHandler}
         />
       </div>
-      {updatedOptions.length ? (
+      {/* allDogs is correct because you want show loading when data isn't rendered */}
+      {allDogs.length ? (
         // <Suspense fallback={<Loading />}>
         <GridDog updatedOptions={updatedOptions} start={start} end={end} />
       ) : (
