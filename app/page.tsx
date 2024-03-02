@@ -21,7 +21,7 @@ export default function Home({
   const [selected, setSelected] = useState<string>("");
   const query = searchParams?.query || "";
   const currentPage = Number(searchParams?.page) || 1;
-  const per_page = Number(searchParams?.per_page) || 4;
+  const per_page = Number(searchParams?.per_page) || 12;
 
   //mocked, skipped and limited in the real app
   const start = (currentPage - 1) * per_page;
