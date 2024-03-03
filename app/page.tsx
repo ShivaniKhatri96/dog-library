@@ -97,27 +97,29 @@ export default function Home({
   return (
     <main className={styles.main}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
-      <div className={styles.searchSelectBox}>
-        <SearchBar />
-        <Select
-          options={options}
-          styles={colorStyles}
-          onChange={selectedHandler}
-        />
-      </div>
       {/* allDogs is correct because you want show loading when data isn't rendered */}
       {allDogs.length ? (
-        // <Suspense fallback={<Loading />}>
-        <GridDog updatedOptions={updatedOptions} start={start} end={end} />
+        <>
+          <div className={styles.searchSelectBox}>
+            <SearchBar />
+            <Select
+              options={options}
+              styles={colorStyles}
+              onChange={selectedHandler}
+            />
+          </div>
+          {/* <Suspense fallback={<Loading />}> */}
+          <GridDog updatedOptions={updatedOptions} start={start} end={end} />
+          {/* </Suspense> */}
+          <Pagination
+            totalPages={totalPages}
+            hasNextPage={end < updatedOptions.length}
+            hasPrevPage={start > 0}
+          />
+        </>
       ) : (
-        //</Suspense>
         <Loading />
       )}
-      <Pagination
-        totalPages={totalPages}
-        hasNextPage={end < updatedOptions.length}
-        hasPrevPage={start > 0}
-      />
     </main>
   );
 }

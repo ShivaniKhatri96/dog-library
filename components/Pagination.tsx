@@ -27,7 +27,6 @@ export const Pagination: FC<PaginationControlsProps> = ({
     replace(`${pathname}?${params.toString()}`);
   };
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-  console.log("pages", pages);
   return (
     <div className={styles.pagination}>
       <button
@@ -45,7 +44,7 @@ export const Pagination: FC<PaginationControlsProps> = ({
           alt="Icon for Previous page"
           className={!hasPrevPage ? styles.arrowDisabled : ""}
         />
-        Previous
+        <span className={styles.paginationBtnText}>Previous</span>
       </button>
 
       <div className={styles.allPageNumbers}>
@@ -70,7 +69,7 @@ export const Pagination: FC<PaginationControlsProps> = ({
           createPageURL(currentPage + 1);
         }}
       >
-        Next
+        <span className={styles.paginationBtnText}>Next</span>
         <Image
           priority
           src={ArrowRight}
