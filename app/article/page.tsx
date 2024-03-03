@@ -8,10 +8,8 @@ const Article = () => {
   console.log("article", article);
 
   return (
-    <main className={styles.articlePage}>
-      <div className={styles.articleBg}>
-        <div className={styles.article}>fdsaf</div>
-      </div>
+    <main className={styles.articleBg}>
+      <div className={styles.article}>fdsaf</div>
       {/* <div>Temperament: {dog?.breeds[0]?.temperament}</div> */}
     </main>
   );
