@@ -2,13 +2,17 @@
 import styles from "./GridDog.module.css";
 import Image from "next/image";
 import NotFound from "./NotFound";
+import Link from "next/link";
 
 type gridType = {
-  updatedOptions: any,
-  start: number,
-  end: number
+  updatedOptions: any;
+  start: number;
+  end: number;
 };
 const GridDog = ({ updatedOptions, start, end }: gridType) => {
+  const handleArticle = (dog:any) => {
+    localStorage.setItem("dogArticle", JSON.stringify(dog));
+  };
   if (!updatedOptions.length) return <NotFound />;
   return (
     <div className={styles.allCards}>
@@ -46,11 +50,13 @@ const GridDog = ({ updatedOptions, start, end }: gridType) => {
                   : `_`}
               </div>
             </div>
-
-            {/* <div>Temperament: {dog?.breeds[0]?.temperament}</div> */}
-            <div>
-              <button className={styles.learnMoreBtn}>Learn more</button>
-            </div>
+            <Link
+              href="/article"
+              className={styles.learnMoreBtn}
+              onClick={() => handleArticle(dog)}
+            >
+              Learn more
+            </Link>
           </div>
         </div>
       ))}

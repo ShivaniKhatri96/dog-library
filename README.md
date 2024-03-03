@@ -38,3 +38,4 @@
 - Making the whole project responsive
 - Deploy project
 - Update readMe for final time
+
