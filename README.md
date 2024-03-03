@@ -29,10 +29,12 @@
 - React-select style change
 - When results are not found while searching and/or selecting, another cute lottie-animation is shown
 - Making searchbar and select responsive
+- (Server-side) pagination added with responsive design in mind 
 
 ### Currently working on
-- Adding (server-side) pagination
+- Clicking on the button to show more info about the species (modal or next page to be decided)
 
 ### Goals
-- Clicking on the button to show more info about the species (modal or next page to be decided)
 - Making the whole project responsive
+- Deploy project
+- Update readMe for final time
