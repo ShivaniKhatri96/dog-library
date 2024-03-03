@@ -21,7 +21,6 @@ export const Pagination: FC<PaginationControlsProps> = ({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;
-
   const createPageURL = (pageNumber: number | string) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", pageNumber.toString());
@@ -53,7 +52,8 @@ export const Pagination: FC<PaginationControlsProps> = ({
         {pages.map((pageNumber) => (
           <div
             key={pageNumber}
-            className={styles.singlePageNumber}
+            className={`${styles.singlePageNumber}
+              ${currentPage === pageNumber ? styles.selectedPageNumber : ""}`}
             onClick={() => {
               createPageURL(pageNumber);
             }}
