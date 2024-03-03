@@ -1,6 +1,9 @@
 "use client";
 import styles from "./Pagination.module.css";
 import { FC } from "react";
+import Image from "next/image";
+import ArrowLeft from "@/public/assets/arrow-left.svg";
+import ArrowRight from "@/public/assets/arrow-right.svg";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 interface PaginationControlsProps {
@@ -33,6 +36,14 @@ export const Pagination: FC<PaginationControlsProps> = ({
           createPageURL(currentPage - 1);
         }}
       >
+        <Image
+          priority
+          src={ArrowLeft}
+          width={15}
+          height={10}
+          alt="Icon for Previous page"
+          className={!hasPrevPage ? styles.arrowDisabled : ""}
+        />
         Previous
       </button>
 
@@ -48,6 +59,14 @@ export const Pagination: FC<PaginationControlsProps> = ({
         }}
       >
         Next
+        <Image
+          priority
+          src={ArrowRight}
+          width={15}
+          height={10}
+          alt="Icon for Next page"
+          className={!hasNextPage ? styles.arrowDisabled : ""}
+        />
       </button>
     </div>
   );
