@@ -1,0 +1,63 @@
+.pagination {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0; 
+}
+.paginationButton {
+  padding: 0.8rem 1rem;
+  background-color: var(--pagination-btn);
+  border: 1px solid var(--pagination-btn);
+  border-radius: 14px;
+  font-weight: bold;
+}
+.paginationButton:enabled:hover {
+  cursor: pointer;
+  background-color: var(--pagination-hover-btn);
+}
+.paginationButton:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+.arrowDisabled {
+  opacity: 0.2;
+}
+/* hiding the text for mobile version to save space */
+@media (max-width: 575.98px) {
+  .paginationBtnText {
+    display: none;
+  }
+}
+.allPageNumbers {
+  display: flex;
+  gap: 0.2rem;
+  font-weight: bold;
+}
+.singlePageNumber {
+  width: 2.5rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  border: solid 2px var(--background);
+  border-radius: 14px;
+}
+.selectedPageNumber {
+  background-color: var(--pagination-btn);
+  border: solid 2px var(--pagination-btn);
+}
+.singlePageNumber:hover {
+  border: solid 2px var(--pagination-btn);
+  cursor: pointer;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .pagination {
+    gap: 3rem;
+    padding: 2rem;
+  }
+  .allPageNumbers {
+    gap: 1rem;
+  }
+}
+

@@ -1,18 +1,31 @@
 "use client";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import GridDog from "./components/grid-dog";
+import GridDog from "../components/GridDog";
 import Select from "react-select";
-import SearchBar from "./components/search-bar";
-import { useSearchParams } from "next/navigation";
-import Loading from "./components/loading";
-import { colorStyles } from "./select-styles/select-styles";
+import SearchBar from "../components/SearchBar";
+import Loading from "../components/Loading";
+import { colorStyles } from "../select-styles/SelectStyles";
+import Pagination from "@/components/Pagination";
 
-export default function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
+    per_page?: string;
+  };
+}) {
   const [allDogs, setAllDogs] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>("");
-  const searchParams: any = useSearchParams();
-  const query = searchParams.get("query")?.toString() || "";
+  const query = searchParams?.query || "";
+  const currentPage = Number(searchParams?.page) || 1;
+  const per_page = Number(searchParams?.per_page) || 12;
+
+  //mocked, skipped and limited in the real app
+  const start = (currentPage - 1) * per_page;
+  const end = start + per_page;
 
   const removeDuplicates = (data: any) => {
     const idSet: any = {}; // Object to store encountered ids
@@ -66,6 +79,7 @@ export default function Home() {
   const selectedHandler = (selectedOption: any) => {
     setSelected(selectedOption.value);
   };
+
   //updating the options based on search and select options
   const updatedOptions = allDogs?.filter((dog) => {
     const isSearchMatch =
@@ -78,22 +92,32 @@ export default function Home() {
       (query === "" || isSearchMatch) && (selected === "" || isSelectedMatch)
     );
   });
+  const totalPages = Math.ceil(updatedOptions.length / per_page);
+
   return (
     <main className={styles.main}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
-      <div className={styles.searchSelectBox}>
-        <SearchBar />
-        <Select
-          options={options}
-          styles={colorStyles}
-          onChange={selectedHandler}
-        />
-      </div>
+      {/* allDogs is correct because you want show loading when data isn't rendered */}
       {allDogs.length ? (
-        // <Suspense fallback={<Loading />}>
-        <GridDog updatedOptions={updatedOptions} />
+        <>
+          <div className={styles.searchSelectBox}>
+            <SearchBar />
+            <Select
+              options={options}
+              styles={colorStyles}
+              onChange={selectedHandler}
+            />
+          </div>
+          {/* <Suspense fallback={<Loading />}> */}
+          <GridDog updatedOptions={updatedOptions} start={start} end={end} />
+          {/* </Suspense> */}
+          <Pagination
+            totalPages={totalPages}
+            hasNextPage={end < updatedOptions.length}
+            hasPrevPage={start > 0}
+          />
+        </>
       ) : (
-        // {/* </Suspense> */}
         <Loading />
       )}
     </main>

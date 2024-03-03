@@ -1,16 +1,19 @@
 "use client";
-import styles from "./grid-dog.module.css";
+import styles from "./GridDog.module.css";
 import Image from "next/image";
-import NotFound from "./search-not-found";
+import NotFound from "./NotFound";
 
 type gridType = {
-  updatedOptions: any;
+  updatedOptions: any,
+  start: number,
+  end: number
 };
-const GridDog = ({ updatedOptions }: gridType) => {
+const GridDog = ({ updatedOptions, start, end }: gridType) => {
   if (!updatedOptions.length) return <NotFound />;
   return (
     <div className={styles.allCards}>
-      {updatedOptions?.map((dog: any) => (
+      {/* slicing for pagination use */}
+      {updatedOptions?.slice(start, end)?.map((dog: any) => (
         <div key={dog.id} className={styles.card}>
           <Image
             src={`${dog?.url}`}

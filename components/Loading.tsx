@@ -1,8 +1,7 @@
 import Lottie from "lottie-react";
-import animationData from "@/public/not-found.json";
-import styles from "./animation.module.css";
-
-const NotFound = () => {
+import animationData from "@/public/assets/loading-animation.json";
+import styles from "./Animation.module.css";
+const Loading = () => {
   return (
     <div className={styles.animationBox}>
       <Lottie
@@ -14,4 +13,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default Loading;
