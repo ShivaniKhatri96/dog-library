@@ -1,6 +1,7 @@
 .pagination {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2rem;
 }
 .paginationButton {
@@ -19,5 +20,25 @@
   opacity: 0.8;
 }
 .arrowDisabled {
-  opacity: 0.3;
+  opacity: 0.2;
+}
+.allPageNumbers {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+}
+.singlePageNumber {
+  padding: 0.5rem 0.8rem;
+  border: solid 2px var(--background);
+  border-radius: 14px;
+}
+.selectedPageNumber {
+  padding: 0.5rem 0.8rem;
+  background-color: red;
+  border: solid 2px var(--background);
+  border-radius: 14px;
+}
+.singlePageNumber:hover {
+  border: solid 2px var(--pagination-btn);
+  cursor: pointer;
 }

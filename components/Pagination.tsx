@@ -27,6 +27,8 @@ export const Pagination: FC<PaginationControlsProps> = ({
     params.set("page", pageNumber.toString());
     replace(`${pathname}?${params.toString()}`);
   };
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+  console.log("pages", pages);
   return (
     <div className={styles.pagination}>
       <button
@@ -47,8 +49,18 @@ export const Pagination: FC<PaginationControlsProps> = ({
         Previous
       </button>
 
-      <div>
-        {currentPage} / {totalPages}
+      <div className={styles.allPageNumbers}>
+        {pages.map((pageNumber) => (
+          <div
+            key={pageNumber}
+            className={styles.singlePageNumber}
+            onClick={() => {
+              createPageURL(pageNumber);
+            }}
+          >
+            {pageNumber}
+          </div>
+        ))}
       </div>
 
       <button
