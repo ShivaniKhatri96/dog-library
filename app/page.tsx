@@ -95,7 +95,7 @@ export default function Home({
   const totalPages = Math.ceil(updatedOptions.length / per_page);
 
   return (
-    <main className={styles.main}>
+    <main className={styles.mainPage}>
       <div className={styles.bookshelfTitle}>BowWow Bookshelf</div>
       {/* allDogs is correct because you want show loading when data isn't rendered */}
       {allDogs.length ? (

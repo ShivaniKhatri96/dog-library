@@ -1,20 +1,28 @@
 .articlePage {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+}
+.articleBg {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-.articleBg {
   background-image: url("../../public/assets/paw-print.jpg");
   background-size: cover;
-  min-height: 40rem;
-  width: 60rem;
-  border-radius: 8px;
+  /* width: 55rem; */
+  width: 100%;
+  /* min-height: 40rem; */
+  height: 100vh;
+  /* border-radius: 8px; */
 }
 .article {
-  background-color: rgba(255, 255, 255, 0.8);
-  min-height: 40rem;
-  height: auto;
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 2rem;
+  /* margin: 2rem; */
+  min-height: 40rem;
+  width: 55rem;
+  /* width: 100%; */
+  /* height: 100vh; */
   border-radius: 8px;
 }
