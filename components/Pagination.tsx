@@ -25,15 +25,15 @@ export const Pagination: FC<PaginationControlsProps> = ({
     replace(`${pathname}?${params.toString()}`);
   };
   return (
-    <div className="flex gap-2">
+    <div className={styles.pagination}>
       <button
-        className="bg-blue-500 text-white p-1"
+        className={styles.paginationButton}
         disabled={!hasPrevPage}
         onClick={() => {
           createPageURL(currentPage - 1);
         }}
       >
-        prev page
+        Previous
       </button>
 
       <div>
@@ -41,13 +41,13 @@ export const Pagination: FC<PaginationControlsProps> = ({
       </div>
 
       <button
-        className="bg-blue-500 text-white p-1"
+        className={styles.paginationButton}
         disabled={!hasNextPage}
         onClick={() => {
           createPageURL(currentPage + 1);
         }}
       >
-        next page
+        Next
       </button>
     </div>
   );

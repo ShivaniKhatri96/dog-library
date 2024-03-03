@@ -1,16 +1,27 @@
 .pagination {
   display: flex;
-  border: 1px solid #fff;
   justify-content: space-between;
-  padding: 20px;
+  padding: 2rem;
 }
 
-.pagination button {
-  padding: 10px;
+.paginationButton {
+  padding: 0.8rem 1rem;
+  background-color: var(--pagination-btn);
+  border: 1px solid var(--pagination-btn);
+  border-radius: 14px;
+  font-weight: bold;
+}
+.paginationButton:enabled:hover {
+  cursor: pointer;
+  background-color: var(--pagination-hover-btn);
+}
+.paginationButton:disabled {
+  cursor: default;
+  opacity: 0.8;
 }
 
 .active {
   background: black;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
