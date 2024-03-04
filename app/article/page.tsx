@@ -1,6 +1,5 @@
 //localStorage is client-side
 "use client";
-import Link from "next/link";
 import styles from "./article.module.css";
 
 const Article = () => {
