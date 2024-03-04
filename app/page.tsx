@@ -40,30 +40,36 @@ export default function Home({
     });
     return result;
   };
-
   useEffect(() => {
+    const cachedData = sessionStorage.getItem("cachedData");
+    if (cachedData) {
+      setAllDogs(JSON.parse(cachedData));
+    } else {
+      fetchData();
+    }
+  }, []);
+  const fetchData = async () => {
     const url =
       "https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_ZpR1zhvt8RaGCvGRWKt8zf2rWK5aDTE2ns2tao5jBJ6eUVHeKOZkXoyrMsziASrZ";
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const filteredData = data.filter(
-          (item: any) =>
-            item?.breeds &&
-            item?.breeds.length !== 0 &&
-            item?.breeds[0].breed_group &&
-            item?.breeds[0].breed_group !== null
-        );
-        //since there are some duplicates remaining after filtering, we remove the duplicates
-        const duplicateFreeData = removeDuplicates(filteredData);
-        setAllDogs(duplicateFreeData);
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
-    fetchData();
-  }, []);
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const filteredData = data.filter(
+        (item: any) =>
+          item?.breeds &&
+          item?.breeds.length !== 0 &&
+          item?.breeds[0].breed_group &&
+          item?.breeds[0].breed_group !== null
+      );
+      //since there are some duplicates remaining after filtering, we remove the duplicates
+      const duplicateFreeData = removeDuplicates(filteredData);
+      setAllDogs(duplicateFreeData);
+      //sessionStorage: for temporary data that should be available only for the current browser session
+      sessionStorage.setItem("cachedData", JSON.stringify(duplicateFreeData));
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
   //options for react-select
   const options = [
     { value: "sporting", label: "Sporting" },

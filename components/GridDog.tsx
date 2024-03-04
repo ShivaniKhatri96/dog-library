@@ -11,7 +11,7 @@ type gridType = {
 };
 const GridDog = ({ updatedOptions, start, end }: gridType) => {
   const handleArticle = (dog:any) => {
-    localStorage.setItem("dogArticle", JSON.stringify(dog));
+    sessionStorage.setItem("dogArticle", JSON.stringify(dog));
   };
   if (!updatedOptions.length) return <NotFound />;
   return (

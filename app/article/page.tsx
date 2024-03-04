@@ -1,15 +1,16 @@
 //localStorage is client-side
 "use client";
+import Link from "next/link";
 import styles from "./article.module.css";
 
 const Article = () => {
-  const dogArticle = localStorage.getItem("dogArticle");
+  const dogArticle = sessionStorage.getItem("dogArticle");
   const article = JSON.parse(dogArticle || "{}");
   console.log("article", article);
 
   return (
     <main className={styles.articleBg}>
-      <div className={styles.article}>fdsaf</div>
+      <div className={styles.article}>Article</div>
       {/* <div>Temperament: {dog?.breeds[0]?.temperament}</div> */}
     </main>
   );
