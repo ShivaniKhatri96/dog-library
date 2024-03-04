@@ -1,11 +1,11 @@
 "use client";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
-import GridDog from "../components/GridDog";
+import GridDog from "@/components/GridDog";
 import Select from "react-select";
-import SearchBar from "../components/SearchBar";
-import Loading from "../components/Loading";
-import { colorStyles } from "../select-styles/SelectStyles";
+import SearchBar from "@/components/SearchBar";
+import Loading from "@/components/Loading";
+import { colorStyles } from "@/select-styles/SelectStyles";
 import Pagination from "@/components/Pagination";
 
 export default function Home({
