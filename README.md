@@ -30,9 +30,10 @@
 - When results are not found while searching and/or selecting, another cute lottie-animation is shown
 - Making searchbar and select responsive
 - (Server-side) pagination added with responsive design in mind 
+- Session storage used to temporarily store data
 
 ### Currently working on
-- Clicking on the button to show more info about the species (modal or next page to be decided)
+- Working on Article page to show more info about the species
 
 ### Goals
 - Making the whole project responsive
