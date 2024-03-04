@@ -10,7 +10,7 @@ type gridType = {
   end: number;
 };
 const GridDog = ({ updatedOptions, start, end }: gridType) => {
-  const handleArticle = (dog:any) => {
+  const handleArticle = (dog: any) => {
     sessionStorage.setItem("dogArticle", JSON.stringify(dog));
   };
   if (!updatedOptions.length) return <NotFound />;
@@ -29,7 +29,6 @@ const GridDog = ({ updatedOptions, start, end }: gridType) => {
           />
           <div className={styles.cardContent}>
             <div className={styles.cardTitle}>{dog?.breeds[0]?.name}</div>
-
             <div className={styles.breedInfoBox}>
               <div className={styles.breedInfoTitle}>Breed group</div>
               <div className={styles.breedInfoContent}>
@@ -45,7 +44,7 @@ const GridDog = ({ updatedOptions, start, end }: gridType) => {
             <div className={styles.breedInfoBox}>
               <div className={styles.breedInfoTitle}>Bred for</div>
               <div className={styles.breedInfoContent}>
-                {dog?.breeds[0]?.bred_for && dog?.breeds[0]?.bred_for?.length
+                {dog?.breeds[0]?.bred_for?.length
                   ? dog?.breeds[0]?.bred_for
                   : `_`}
               </div>
