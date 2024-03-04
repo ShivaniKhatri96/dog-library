@@ -38,4 +38,6 @@
 - Making the whole project responsive
 - Deploy project
 - Update readMe for final time
-- background image: [freepik](https://www.freepik.com/free-vector/seamless-animal-pattern-background-cute-paw-print-vector-illustration_20266394.htm#query=cartoon%20dog%20paw%20print&position=39&from_view=keyword&track=ais&uuid=d40c7f50-d738-47f7-a885-8f49fa6672db)
+
+### Linked used
+- Background image for article page: [freepik](https://www.freepik.com/free-vector/seamless-animal-pattern-background-cute-paw-print-vector-illustration_20266394.htm#query=cartoon%20dog%20paw%20print&position=39&from_view=keyword&track=ais&uuid=d40c7f50-d738-47f7-a885-8f49fa6672db)
