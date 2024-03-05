@@ -36,15 +36,16 @@
 - Making searchbar and select responsive
 - (Server-side) pagination added with responsive design in mind
 - Session storage used to temporarily store data
+- Article page shows more info about the species
 
 ### Currently working on
 
-- Working on Article page to show more info about the species
+- Make Article page responsive
 
 ### Goals
 
-- Making the whole project responsive
 - Deploy project
+- Check if there is any bugs in the project & fix if any
 - Update readMe for final time
 
 ### Linked used
