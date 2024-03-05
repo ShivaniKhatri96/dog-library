@@ -5,8 +5,11 @@ import styles from "./article.module.css";
 import Image from "next/image";
 
 const Article = () => {
-  const dogArticle = sessionStorage?.getItem("dogArticle");
-  const article = JSON.parse(dogArticle || "{}");
+  let article;
+  if (typeof window !== "undefined") {
+    const dogArticle = sessionStorage?.getItem("dogArticle");
+    article = JSON.parse(dogArticle || "{}");
+  }
 
   return (
     <main className={styles.articleBg}>

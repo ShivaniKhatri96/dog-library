@@ -41,12 +41,16 @@ export default function Home({
     return result;
   };
   useEffect(() => {
-    const cachedData = sessionStorage?.getItem("cachedData");
-    if (cachedData) {
-      setAllDogs(JSON.parse(cachedData));
-    } else {
-      fetchData();
-    }
+    //we check if window is defined (indicating that the code is running in the browser environment)
+    if (typeof window !== 'undefined') {
+      const cachedData = sessionStorage?.getItem("cachedData");
+      if(cachedData){
+        setAllDogs(JSON.parse(cachedData));
+      }
+      else {
+        fetchData();
+      }
+    } 
   }, []);
   const fetchData = async () => {
     const url =
