@@ -5,7 +5,7 @@ import styles from "./article.module.css";
 import Image from "next/image";
 
 const Article = () => {
-  const dogArticle = sessionStorage.getItem("dogArticle");
+  const dogArticle = sessionStorage?.getItem("dogArticle");
   const article = JSON.parse(dogArticle || "{}");
 
   return (
