@@ -37,14 +37,14 @@
 - (Server-side) pagination added with responsive design in mind
 - Session storage used to temporarily store data
 - Article page shows more info about the species
+- Article page is responsive now
 
 ### Currently working on
 
-- Make Article page responsive
+- Deploy project
 
 ### Goals
 
-- Deploy project
 - Check if there is any bugs in the project & fix if any
 - Update readMe for final time
 
