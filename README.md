@@ -20,7 +20,11 @@
 
 ### Responsive Design
 
-> This project is done with responsive design in mind
+> This project is done with responsive design in mind that adapts to different screen sizes.
+> Below you can see example for mobile, tablet and large screens
+![mobile](./public/readmeAssets/mobile.png)
+![tablet](./public/readmeAssets/tablet.png)
+![large](./public/readmeAssets/desktop.png)
 
 ### Functionalities
 
@@ -32,7 +36,7 @@
 - **Select / dropdown is added using React-select** to filter species based on breed group
 - **(Server-side) Pagination** is added
 - When results are not found while searching and/or selecting, another cute [lottie animation](https://lottiefiles.com/) is shown
-- **Learn more button** takes you to **Article page** and shows more info about the species
+- **'Learn more' button** takes you to **Article page** and shows more info about the species
 
 ### Linked used
 
