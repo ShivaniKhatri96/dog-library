@@ -25,7 +25,7 @@ https://github.com/ShivaniKhatri96/dog-library/assets/48630686/6fe56597-53b8-4ae
 ### Responsive Design
 
 > This project is done with responsive design in mind. It adapts to different screen sizes.
-> Below you can see example for mobile, tablet and large screens.
+> Below you can see example for small, mobile and large screens.
 >
 ![mobile](./public/readmeAssets/mobile.png)
 ![tablet](./public/readmeAssets/tablet.png)
