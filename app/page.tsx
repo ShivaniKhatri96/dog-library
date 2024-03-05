@@ -41,7 +41,7 @@ export default function Home({
     return result;
   };
   useEffect(() => {
-    const cachedData = sessionStorage.getItem("cachedData");
+    const cachedData = sessionStorage?.getItem("cachedData");
     if (cachedData) {
       setAllDogs(JSON.parse(cachedData));
     } else {
