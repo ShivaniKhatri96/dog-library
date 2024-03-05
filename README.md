@@ -4,51 +4,38 @@
 > If you are a dog lover, it's especially for you _wink_.
 > It takes some time for the data to load from the API. Just be patient when the data loads _hehe_
 
-### Screenshots
+### Website
 
-> Will be added once the project is completed
+> To visit website, click [here](https://bowwow-bookshelf-nine.vercel.app/)
 
-### Tools that will be used
+### Tools used
 
-> This will be a frontend project using external API
+> This is a frontend project using external API
 
 - Next.js
 - Typescript
 - CSS
 - React-select (library)
 - [Dog API](https://thedogapi.com/)
-- lottie-animation for loading screen
 
 ### Responsive Design
 
-> This project will be done with responsive design in mind
+> This project is done with responsive design in mind
 
-### Completed Tasks
+### Functionalities
 
-- Data rendered from the [Dog API](https://thedogapi.com/)
-- Loading screen added from lottie-animation and it shows when data isn't rendered yet from the [Dog API](https://thedogapi.com/)
-- Grid layout containg various Dogs created with responsive layout in mind
-- String truncated with 'text-transform:Ellipsis' in the Grid layout
-- Search bar (using URL params) that filters dogs based on their species name
-- Select/ dropdown to filter species based on some criteria
-- React-select style change
-- When results are not found while searching and/or selecting, another cute lottie-animation is shown
-- Making searchbar and select responsive
-- (Server-side) pagination added with responsive design in mind
-- Session storage used to temporarily store data
-- Article page shows more info about the species
-- Article page is responsive now
-
-### Currently working on
-
-- Deploy project
-
-### Goals
-
-- Check if there is any bugs in the project & fix if any
-- Update readMe for final time
+- Data is rendered from the [Dog API](https://thedogapi.com/) and shown in a Grid layout 
+> String is truncated with 'text-transform:Ellipsis' in the Grid layout when the text is too long
+> Loading screen is added from [lottieFiles](https://lottiefiles.com/) when the data is loading 
+- Search bar (using URL params) is added to filter dogs based on their species name
+- Select / dropdown is added using React-select to filter species based on breed group
+> When results are not found while searching and/or selecting, another cute lottie-animation is shown
+- (Server-side) Pagination was added
+- Session storage used to store data temporarily
+- 'Learn more' button takes you to Article page shows more info about the species
 
 ### Linked used
 
-- Background image for article page added from [freepik](https://www.freepik.com/free-vector/seamless-animal-pattern-background-cute-paw-print-vector-illustration_20266394.htm#query=cartoon%20dog%20paw%20print&position=39&from_view=keyword&track=ais&uuid=d40c7f50-d738-47f7-a885-8f49fa6672db)
-- Icons (svg format) added from [svgrepo.com](https://www.svgrepo.com/)
+- [lottieFiles](https://lottiefiles.com/) for adding animations
+- [freepik](https://www.freepik.com/free-vector/seamless-animal-pattern-background-cute-paw-print-vector-illustration_20266394.htm#query=cartoon%20dog%20paw%20print&position=39&from_view=keyword&track=ais&uuid=d40c7f50-d738-47f7-a885-8f49fa6672db) for adding background Image for Article page
+- [svgrepo.com](https://www.svgrepo.com/): for adding Icons (svg format)
