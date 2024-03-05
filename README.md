@@ -6,7 +6,7 @@
 
 ### Website
 
-> To visit website, click [here](https://bowwow-bookshelf-nine.vercel.app/)
+> To visit the website, click [here](https://bowwow-bookshelf-nine.vercel.app/)
 
 ### Tools used
 
@@ -24,15 +24,15 @@
 
 ### Functionalities
 
-- Data is rendered from the [Dog API](https://thedogapi.com/) and shown in a Grid layout 
-> String is truncated with 'text-transform:Ellipsis' in the Grid layout when the text is too long
-> Loading screen is added from [lottieFiles](https://lottiefiles.com/) when the data is loading 
-- Search bar (using URL params) is added to filter dogs based on their species name
-- Select / dropdown is added using React-select to filter species based on breed group
-> When results are not found while searching and/or selecting, another cute lottie-animation is shown
-- (Server-side) Pagination was added
-- Session storage used to store data temporarily
-- 'Learn more' button takes you to Article page shows more info about the species
+- Data is rendered from the [Dog API](https://thedogapi.com/) and shown in a **Grid layout** 
+- **Loading animation** is added from [lottieFiles](https://lottiefiles.com/) when the data is loading
+- **Session storage** is used to store data temporarily
+- String is truncated with **text-transform:Ellipsis** in the Grid layout when the text is too long
+- **Search bar (using URL params)** is added to filter dogs based on their species name
+- **Select / dropdown is added using React-select** to filter species based on breed group
+- **(Server-side) Pagination** is added
+- When results are not found while searching and/or selecting, another cute [lottie animation](https://lottiefiles.com/) is shown
+- **Learn more button** takes you to **Article page** and shows more info about the species
 
 ### Linked used
 
