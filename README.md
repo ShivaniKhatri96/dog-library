@@ -46,4 +46,4 @@ https://github.com/ShivaniKhatri96/dog-library/assets/48630686/4afda7d9-c6bd-401
 
 - [lottieFiles](https://lottiefiles.com/) for adding animations
 - [freepik](https://www.freepik.com/free-vector/seamless-animal-pattern-background-cute-paw-print-vector-illustration_20266394.htm#query=cartoon%20dog%20paw%20print&position=39&from_view=keyword&track=ais&uuid=d40c7f50-d738-47f7-a885-8f49fa6672db) for adding background Image for Article page
-- [svgrepo.com](https://www.svgrepo.com/): for adding Icons (svg format)
+- [svgrepo.com](https://www.svgrepo.com/) for adding Icons (svg format)
