@@ -4,11 +4,12 @@
   align-items: center;
   background-image: url("../../public/assets/paw-print.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  /* width: 100vw;
+  height: 100vh; */
   width: 100%;
-  height: 100vh;
-  /* height: 100%; */
+  height: 100%;
   padding: 1rem;
-  overflow: hidden;
 }
 .article {
   display: flex;
@@ -19,7 +20,6 @@
   min-height: 40rem;
   width: 50rem;
   border-radius: 8px;
-  overflow: auto;
 }
 .articleTitle {
   font-family: "Protest Revolution", sans-serif;
@@ -30,9 +30,9 @@
 .articleSection {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.3rem;
 }
-.sectionTitle {
+.boldFont {
   font-weight: 700;
 }
 .notFoundBox {
