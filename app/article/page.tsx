@@ -13,7 +13,7 @@ const Article = () => {
 
   return (
     <main className={styles.articleBg}>
-      {Object.keys(article).length === 0 ? (
+      {Object.keys(article)?.length === 0 ? (
         <div className={styles.notFoundBox}>
           <NotFound />
         </div>
