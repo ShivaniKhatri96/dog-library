@@ -41,15 +41,14 @@ export default function Home({
   };
   useEffect(() => {
     //we check if window is defined (indicating that the code is running in the browser environment)
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const cachedData = sessionStorage?.getItem("cachedData");
-      if(cachedData){
+      if (cachedData) {
         setAllDogs(JSON.parse(cachedData));
-      }
-      else {
+      } else {
         fetchData();
       }
-    } 
+    }
   }, []);
   const fetchData = async () => {
     const url =
@@ -94,13 +93,15 @@ export default function Home({
       {/* allDogs is correct because you want show loading when data isn't rendered */}
       {allDogs.length ? (
         <>
-          <div className={styles.searchSelectBox}>
-            <SearchBar />
-            <SelectOption selected={selected} setSelected={setSelected}/>
+          <div className={styles.mainContent}>
+            <div className={styles.searchSelectBox}>
+              <SearchBar />
+              <SelectOption selected={selected} setSelected={setSelected} />
+            </div>
+            {/* <Suspense fallback={<Loading />}> */}
+            <GridDog updatedOptions={updatedOptions} start={start} end={end} />
+            {/* </Suspense> */}
           </div>
-          {/* <Suspense fallback={<Loading />}> */}
-          <GridDog updatedOptions={updatedOptions} start={start} end={end} />
-          {/* </Suspense> */}
           <Pagination
             totalPages={totalPages}
             hasNextPage={end < updatedOptions.length}
