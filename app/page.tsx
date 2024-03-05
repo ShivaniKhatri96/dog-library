@@ -2,11 +2,10 @@
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import GridDog from "@/components/GridDog";
-import Select from "react-select";
 import SearchBar from "@/components/SearchBar";
 import Loading from "@/components/Loading";
-import { colorStyles } from "@/select-styles/SelectStyles";
 import Pagination from "@/components/Pagination";
+import SelectOption from "@/components/SelectOption";
 
 export default function Home({
   searchParams,
@@ -74,21 +73,6 @@ export default function Home({
       console.log("error", error);
     }
   };
-  //options for react-select
-  const options = [
-    { value: "sporting", label: "Sporting" },
-    { value: "non-sporting", label: "Non-Sporting" },
-    { value: "terrier", label: "Terrier" },
-    { value: "herding", label: "Herding" },
-    { value: "toy", label: "Toy" },
-    { value: "working", label: "Working" },
-    { value: "hound", label: "Hound" },
-    { value: "mixed", label: "Mixed" },
-    { value: "any", label: "Any" },
-  ];
-  const selectedHandler = (selectedOption: any) => {
-    setSelected(selectedOption.value);
-  };
 
   //updating the options based on search and select options
   const updatedOptions = allDogs?.filter((dog) => {
@@ -112,11 +96,7 @@ export default function Home({
         <>
           <div className={styles.searchSelectBox}>
             <SearchBar />
-            <Select
-              options={options}
-              styles={colorStyles}
-              onChange={selectedHandler}
-            />
+            <SelectOption selected={selected} setSelected={setSelected}/>
           </div>
           {/* <Suspense fallback={<Loading />}> */}
           <GridDog updatedOptions={updatedOptions} start={start} end={end} />
