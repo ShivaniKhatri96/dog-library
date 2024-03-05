@@ -40,7 +40,7 @@ https://github.com/ShivaniKhatri96/dog-library/assets/48630686/6fe56597-53b8-4ae
 - **Search bar (using URL params)** is added to filter dogs based on their species name
 - **Select / dropdown is added using React-select** to filter species based on breed group
 - **(Server-side) Pagination** is added
-- When results are not found while searching and/or selecting, another cute [lottie animation](https://lottiefiles.com/) is shown
+- When results are not found while searching and/or selecting, another cute animation from [lottieFiles](https://lottiefiles.com/) is shown
 - **'Learn more' button** takes you to **Article page** and shows more info about the species
 
 ### Linked used
