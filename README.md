@@ -21,7 +21,8 @@
 ### Responsive Design
 
 > This project is done with responsive design in mind that adapts to different screen sizes.
-> Below you can see example for mobile, tablet and large screens
+> Below you can see example for mobile, tablet and large screens.
+>
 ![mobile](./public/readmeAssets/mobile.png)
 ![tablet](./public/readmeAssets/tablet.png)
 ![large](./public/readmeAssets/desktop.png)
