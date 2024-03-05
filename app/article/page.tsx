@@ -5,19 +5,16 @@ import styles from "./article.module.css";
 import Image from "next/image";
 
 const Article = () => {
-  let article = null;
+  let article: any = {};
   if (typeof window !== "undefined") {
     const dogArticle = sessionStorage?.getItem("dogArticle");
-    article = JSON.parse(dogArticle || "{}");
+    if (dogArticle) {
+      article = JSON.parse(dogArticle || "{}");
+    }
   }
-
   return (
     <main className={styles.articleBg}>
-      {Object?.keys(article)?.length === 0 ? (
-        <div className={styles.notFoundBox}>
-          <NotFound />
-        </div>
-      ) : (
+      {Object?.keys(article)?.length > 0 ? (
         <div className={styles.article}>
           <div className={styles.articleTitle}>{article.breeds[0].name}</div>
           <div className={styles.articleSection}>
@@ -81,6 +78,10 @@ const Article = () => {
               </div>
             </div>
           </div>
+        </div>
+      ) : (
+        <div className={styles.notFoundBox}>
+          <NotFound />
         </div>
       )}
     </main>
