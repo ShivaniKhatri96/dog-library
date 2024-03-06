@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0; 
+  padding-bottom: 0.5rem;
 }
 .paginationButton {
   padding: 0.8rem 1rem;
@@ -54,7 +54,6 @@
 @media (min-width: 768px) {
   .pagination {
     gap: 3rem;
-    padding: 2rem;
   }
   .allPageNumbers {
     gap: 1rem;
