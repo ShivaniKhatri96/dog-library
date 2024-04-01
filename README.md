@@ -43,7 +43,7 @@ https://github.com/ShivaniKhatri96/dog-library/assets/48630686/6fe56597-53b8-4ae
 - When results are not found while searching and/or selecting, another cute animation from [lottieFiles](https://lottiefiles.com/) is shown
 - **'Learn more' button** takes you to **Article page** and shows more info about the species
 
-### Linked used
+### Links used
 
 - [lottieFiles](https://lottiefiles.com/) for adding animations
 - [freepik](https://www.freepik.com/free-vector/seamless-animal-pattern-background-cute-paw-print-vector-illustration_20266394.htm#query=cartoon%20dog%20paw%20print&position=39&from_view=keyword&track=ais&uuid=d40c7f50-d738-47f7-a885-8f49fa6672db) for adding background Image for Article page
